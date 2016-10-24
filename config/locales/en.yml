@@ -2,6 +2,7 @@ en:
   navbar:
     students: Students
     teachers: Teachers
+    students_payments: Students payments
     reports: Reports
     reports_subjects: Subjects
     logout: Logout
@@ -29,6 +30,11 @@ en:
       first_name: first name
       last_name: last name
       academic_title: academic title
+  students_payments:
+    columns:
+      full_name: Full name
+      due_date: Due date
+      paid_date: Paid date
   subjects:
     columns:
       full_name: Full name

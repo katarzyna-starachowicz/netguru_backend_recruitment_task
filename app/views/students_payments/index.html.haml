@@ -1,0 +1,9 @@
+- breadcrumb :students_payments
+%table.table.table-condensed
+  %thead
+    %tr
+      %th= t('students_payments.columns.full_name')
+      %th= t('students_payments.columns.due_date')
+      %th= t('students_payments.columns.paid_date')
+  %tbody
+    = render students_payments
