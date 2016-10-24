@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :students do
     get :subjects
+    resources :students_payments
   end
 
   resources :teachers do

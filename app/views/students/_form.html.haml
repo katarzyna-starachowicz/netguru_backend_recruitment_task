@@ -4,5 +4,8 @@
   = f.input :birthdate, as: :date, include_blank: true, start_year: Date.today.year - 120,
                         end_year: Date.today.year - 5
   = f.association :subject_items, label_method: :title, value_method: :id, label: 'Subject Items', as: :check_boxes
+  = f.simple_fields_for :students_payment do |p|
+    = p.input :due_date, as: :date, include_blank: true
+    = p.input :paid_date, as: :date, include_blank: true
   = link_to t('shared.back'), students_path, class: 'btn btn-default'
   = f.button :submit

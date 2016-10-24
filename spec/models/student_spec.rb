@@ -16,10 +16,11 @@ RSpec.describe Student do
     it { is_expected.to have_many :subject_items }
     it { is_expected.to have_many :subject_item_notes }
     it { is_expected.to have_many :participations }
-    it { is_expected.to have_many :students_payments }
+    it { is_expected.to have_one  :students_payment }
   end
 
   describe 'nested attributes' do
     it { should accept_nested_attributes_for :subject_items }
+    it { should accept_nested_attributes_for :students_payment }
   end
 end
