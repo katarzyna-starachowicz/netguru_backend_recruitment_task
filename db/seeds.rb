@@ -19,10 +19,15 @@ teachers = Teacher.all
 end
 
 25.times do
+  payment = StudentsPayment.create!(
+            due_date:  Faker::Date.forward(30),
+            paid_date: Faker::Date.forward(30)
+          )
   Student.create!(
-    first_name: Faker::Name.first_name,
-    last_name:  Faker::Name.last_name,
-    birthdate:  Faker::Date.between(120.years.ago, 5.years.ago)
+    first_name:       Faker::Name.first_name,
+    last_name:        Faker::Name.last_name,
+    birthdate:        Faker::Date.between(120.years.ago, 5.years.ago),
+    students_payment: payment
   )
 end
 
